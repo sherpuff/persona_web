@@ -165,7 +165,6 @@ nav a:hover, nav a.active {
     transform: translateY(-3px);
 }
 
-/* 轮播图样式 */
 .carousel-section {
     max-width: 1200px;
     margin: 50px auto;
@@ -396,7 +395,7 @@ nav a:hover, nav a.active {
 
  /* 页脚样式 */
 footer {
-    background-color: #333; /* 页脚背景颜色 */
+    background-color: #3498db; /* 页脚背景颜色 */
     color: #fff; /* 文字颜色 */
     text-align: center; /* 文本居中 */
     padding: 20px 0; /* 内边距 */
@@ -416,8 +415,54 @@ footer {
     margin-bottom: 40px;
 }
 
-.footer-content p {
-    margin: 0; /* 移除段落外边距 */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+ }
+
+.footer-title {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: var(--dusty-rose);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.copyright {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
 }
 
 /* 响应式设计 */

@@ -165,6 +165,10 @@ nav a:hover, nav a.active {
     transform: translateY(-3px);
 }
 
+<<<<<<< HEAD
+=======
+/* 轮播图样式 */
+>>>>>>> 07ed22062b83c1aef87cb5050702ab9d66cfbb84
 .carousel-section {
     max-width: 1200px;
     margin: 50px auto;
@@ -395,7 +399,11 @@ nav a:hover, nav a.active {
 
  /* 页脚样式 */
 footer {
+<<<<<<< HEAD
     background-color: #3498db; /* 页脚背景颜色 */
+=======
+    background-color: #333; /* 页脚背景颜色 */
+>>>>>>> 07ed22062b83c1aef87cb5050702ab9d66cfbb84
     color: #fff; /* 文字颜色 */
     text-align: center; /* 文本居中 */
     padding: 20px 0; /* 内边距 */
@@ -415,6 +423,7 @@ footer {
     margin-bottom: 40px;
 }
 
+<<<<<<< HEAD
 .footer-section {
     flex: 1;
     min-width: 250px;
@@ -463,6 +472,10 @@ footer {
     padding-top: 30px;
     border-top: 1px solid rgba(255,255,255,0.1);
     font-size: 0.9rem;
+=======
+.footer-content p {
+    margin: 0; /* 移除段落外边距 */
+>>>>>>> 07ed22062b83c1aef87cb5050702ab9d66cfbb84
 }
 
 /* 响应式设计 */

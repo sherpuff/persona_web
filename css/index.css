@@ -165,10 +165,7 @@ nav a:hover, nav a.active {
     transform: translateY(-3px);
 }
 
-<<<<<<< HEAD
-=======
 /* 轮播图样式 */
->>>>>>> 07ed22062b83c1aef87cb5050702ab9d66cfbb84
 .carousel-section {
     max-width: 1200px;
     margin: 50px auto;
@@ -296,39 +293,103 @@ nav a:hover, nav a.active {
     transform: scale(1.2);
 }
 
-/* 博客内容区域 */
+/* 轮播图标题效果 */
+.carousel-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    background: rgba(215, 215, 213, 0.1);
+    text-shadow: 0 0 5px rgba(127, 123, 108, 0.5);
+}
+
+.carousel-title:hover {
+    color: #fcfcfc;
+    background: rgba(171, 171, 169, 0.2);
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px rgba(207, 207, 195, 0.7);
+}
+
+/* 内容区域 */
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #a9a9a9;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 30px 0;
+    color: #000000;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #c5c3c3cf, transparent);
+}
+
 .blog-content {
-    max-width: 1200px;
-    margin: 70px auto;
-    padding: 0 20px;
+    margin-top: 40px;
 }
 
 .month-section {
     margin-bottom: 60px;
-    background: white;
+    background: rgba(249, 249, 249, 0.724);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .month-header {
-    background: linear-gradient(to right, var(--taupe), var(--sage-green));
-    padding: 20px 30px;
-    color: white;
-    font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 20px;
+    font-size: 1.5rem;
+    color: white;
+    background: rgba(210, 215, 217, 0.717);
+    border-bottom: 2px solid #71706d;
 }
 
 .month-title {
-    font-weight: 400;
+    font-size: 1.8rem;
+    color: #2c2502;
+    display: flex;
+    align-items: center;
+}
+
+.month-title::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #c1c0b9;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 .post-count {
-    background: rgba(255,255,255,0.2);
+    background: rgba(216, 211, 181, 0.2);
+    color: #cfc079;
     padding: 3px 12px;
     border-radius: 20px;
+    font-weight: bold;
     font-size: 0.9rem;
 }
 
@@ -339,17 +400,32 @@ nav a:hover, nav a.active {
 .blog-post {
     display: flex;
     margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid var(--light-gray);
+    padding: 30px;
+    background: rgba(100, 100, 114, 0.6);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-post:hover {
+    background: rgba(90, 90, 97, 0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-color: rgba(125, 123, 110, 0.3);
 }
 
 .post-img {
-    width: 250px;
+    width: 300px;
     height: 180px;
     object-fit: cover;
     border-radius: 8px;
     margin-right: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+}
+
+.blog-post:hover .post-img {
+    transform: scale(1.03);
 }
 
 .post-content {
@@ -357,53 +433,52 @@ nav a:hover, nav a.active {
 }
 
 .post-title {
-    font-size: 1.6rem;
-    color: var(--charcoal);
+    font-size: 1.7rem;
     margin-bottom: 15px;
-    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.post-title:hover {
+    color: #eae5c9;
+    background: rgba(249, 212, 35, 0.15);
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px rgba(249, 212, 35, 0.5);
 }
 
 .post-meta {
     display: flex;
     gap: 20px;
-    color: var(--dark-taupe);
     margin-bottom: 15px;
-    font-size: 0.9rem;
+    color: #f2f2f2;
+    font-size: 0.95rem;
+}
+
+.post-meta span {
+    display: flex;
+    align-items: center;
+}
+
+.post-meta i {
+    margin-right: 8px;
+    color: #f9d423;
 }
 
 .post-excerpt {
-    color: #666;
-    margin-bottom: 20px;
     line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ccc;
 }
 
-.read-more {
-    display: inline-block;
-    background: var(--dusty-rose);
-    color: white;
-    text-decoration: none;
-    padding: 8px 20px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
 
-.read-more:hover {
-    background: var(--muted-blue);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.blog-post:hover .post-img {
-    transform: scale(1.03);
-}
-
- /* 页脚样式 */
+/* 页脚样式 */
 footer {
-<<<<<<< HEAD
-    background-color: #3498db; /* 页脚背景颜色 */
-=======
-    background-color: #333; /* 页脚背景颜色 */
->>>>>>> 07ed22062b83c1aef87cb5050702ab9d66cfbb84
+    background-color: #3498dbab; /* 页脚背景颜色 */
     color: #fff; /* 文字颜色 */
     text-align: center; /* 文本居中 */
     padding: 20px 0; /* 内边距 */
@@ -423,7 +498,6 @@ footer {
     margin-bottom: 40px;
 }
 
-<<<<<<< HEAD
 .footer-section {
     flex: 1;
     min-width: 250px;
@@ -472,10 +546,6 @@ footer {
     padding-top: 30px;
     border-top: 1px solid rgba(255,255,255,0.1);
     font-size: 0.9rem;
-=======
-.footer-content p {
-    margin: 0; /* 移除段落外边距 */
->>>>>>> 07ed22062b83c1aef87cb5050702ab9d66cfbb84
 }
 
 /* 响应式设计 */
